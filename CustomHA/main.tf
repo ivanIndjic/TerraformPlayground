@@ -265,7 +265,7 @@ resource "aws_network_acl" "private_acl" {
     	  action     = "allow"
     	  cidr_block = "10.0.4.0/24"
     	  from_port  = 22
-    	  to_port    = 22              #For some type of bastion host in public subnet 1???????
+    	  to_port    = 22             
   	}
 	
   	ingress {
@@ -607,7 +607,7 @@ resource "aws_db_instance" "read_replica" {
 	username = "ivan"
 	password = "ivanindjic"
 	parameter_group_name = "default.mysql5.7"
-	apply_immediately = true	
+	apply_immediately = true
 	engine = "mysql"
 	availability_zone = "eu-west-1b"
 	engine_version = "5.7"
